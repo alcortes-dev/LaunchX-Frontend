@@ -4,4 +4,4 @@ En el presente repositorio se incluirán todas las notas y actividades de la mis
 
 Para manejar el orden de estas se utilizará la misma estructura que el repositorio base.
 
-[01 - Intro](./)
+[01-INTRO](https://github.com/alcortes-dev/LaunchX-Frontend/tree/main/01-INTRO)
