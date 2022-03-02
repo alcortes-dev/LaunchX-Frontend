@@ -153,3 +153,39 @@ El diseño de la aplicación se realizará con la metodología mobile first, par
 
 La paleta de colores básica sera con los colores solicitados por el clientes, pero en la etapa de UI se definirán colores extra para resaltar elementos dentro de la aplicación.
 
+## Mapa de ventanas de la aplicación 
+
+```mermaid
+stateDiagram-v2
+Home --> Nosotros
+Home --> Contacto
+Home --> Login
+Login --> Usuario
+Login --> Abogado
+Login --> Administrador
+state Usuario{
+	[*] --> MisProcesos
+	[*] --> MisPagos
+	[*] --> MisNotificaciones
+	[*] --> NuevoProceso
+}
+state Abogado{
+	[*] --> CasosAsignados
+	[*] --> Notificaciones
+	state CasosAsignados{
+		[*] --> ActualizarStatus
+		[*] --> SolicitudCargaDeInformación
+		[*] --> Documentos
+		state Documentos{
+			[*] --> CargarNuevoDocumento
+			[*] --> Actualizar
+		}
+	}
+}
+state Administrador{
+	[*] --> NuevosCasos
+	[*] --> Pagos
+}
+
+```
+
