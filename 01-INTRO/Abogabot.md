@@ -47,10 +47,6 @@ Nuestro público objetivo se encuentra determinado por los siguientes factores
 
 
 
-
-
-
-
 ## Especificación de requerimientos
 
 ### Formulario de captura de demandas
@@ -117,13 +113,37 @@ El sistema verificará de manera periódica las solicitudes de demanda en la que
 
 ### Gestión de notificaciones
 
+La aplicación generará notificaciones por cada evento que genere un cambio en el estado, entre estos eventos se encuentran:
 
+* Creación de nueva demanda - Se notificará a usuario abogado
+* Registro de pago - Se notificará a usuario abogado
+* Generación de documento de demanda - Se notificará a usuario  - Se notificará a usuario abogado
+* Modificación en estado de demanda - Se notificará a usuario cliente
+* Solicitud de carga de información extra - Se notificará a usuario cliente
+* carga de información extra - Se notificará a usuario abogado
+
+Estas notificaciones se realizarán vía correo electrónico
 
 ### Seguimiento de pagos
 
+Se visualizará la información de los pagos realizados mostrando la siguiente información:
+
+* ID de pago
+* Caso relacionado
+* Fecha de pago
+* Tipo de pago (tarjeta o referencia)
+* Nombre de usuario cliente
+* Monto del pago
+
+Esta información deberá contar con algún mecanismo para filtrar y/o agrupar por periodo de tiempo, cliente o tipo de pago.
+
 ### Actualización de demanda
 
-Los usuarios abogado podrán realizar 
+Los usuarios abogado podrán realizar los siguientes procesos:
+
+* Solicitud de carga de información complementaria para dar seguimiento al proceso
+* Modificar el estado del proceso, mismo que se notificará al usuario cliente
+* Solicitud de pago para seguimientos (honorarios, copias, procesos externos, etc)
 
 ### Diseño responsivo
 
